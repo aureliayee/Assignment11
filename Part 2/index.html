@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Mobile Employee Directory</title>
+    <link href="http://code.jquery.com/mobile/git/jquery.mobile-git.min.css" rel="stylesheet">
+    <link href="css/black.min.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+<!---HOME--->
+    <div data-role="page" id="home">
+        <header data-role="header">
+            <h1>Directory</h1>
+        </header>
+        <section data-role="content">
+          	<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search" id="result">
+          	</ul><br>
+          	<div id="welcome">
+          	<h4>Welcome to Directory!</h4>
+            <p>This is a sample app that demonstrates how to build applications with jQuery Mobile.</p>
+            </div>
+        </section>
+    </div>
+    
+<!---DETAILS--->
+    <div data-role="page" id="details">
+        <header data-role="header">
+                   <a href="#" data-rel="back" data-iconshadow="true" class="ui-btn ui-btn-b ui-corner-all ui-icon-back ui-btn-icon-left ui-shadow">Back</a>
+            <h1>Employee Details</h1>
+                    <a href="#home" id="search" data-iconshadow="true" class="ui-btn ui-btn-b ui-corner-all ui-icon-search ui-btn-icon-left ui-shadow">Search</a>
+        </header>
+        <section data-role="content">
+            <div id="empDetails"></div>
+            <ul data-role="listview" data-inset="true" id="empDetailsList"></ul>
+        </section>
+    </div>
+    
+<!---Directory--->
+    <div data-role="page" id="teamMembers">
+        <header data-role="header">
+                  <a href="#" data-rel="back" data-iconshadow="true" class="ui-btn ui-btn-b ui-corner-all ui-icon-back ui-btn-icon-left ui-shadow">Back</a>
+            <h1>Direct Reports</h1>
+                    <a href="#home" id="search" data-iconshadow="true" class="ui-btn ui-btn-b ui-corner-all ui-icon-search ui-btn-icon-left ui-shadow">Search</a>
+        </header>
+        <section data-role="content">
+            <ul data-role="listview" id="teamMembersResult"></ul>
+        </section>
+    </div>
+    
+</body>
+</html>
